@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>relya</title>
+
+<link rel="icon" type="image/svg+xml"
+href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23F2C94C' /%3E%3Ccircle cx='30' cy='40' r='8' fill='white' /%3E%3Ccircle cx='70' cy='40' r='8' fill='white' /%3E%3Ccircle cx='34' cy='44' r='3' fill='black' /%3E%3Ccircle cx='66' cy='44' r='3' fill='black' /%3E%3Cpath d='M35 65 Q50 80 65 65' stroke='black' stroke-width='3' fill='none' /%3E%3Cpolygon points='20,20 30,15 25,25' fill='%23F2C94C' /%3E%3Cpolygon points='80,20 70,15 75,25' fill='%23F2C94C' /%3E%3C/svg%3E">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html,body{
+min-height:100vh;
+width:100%;
+font-family:'Poppins',sans-serif;
+background:#121212;
+color:#ffffff;
+}
+
+body{
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:30px 15px;
+gap:25px;
+max-width:900px;
+margin:0 auto;
+}
+
+.block{
+background:#1e1e1e;
+border:1px solid #cccccc;
+border-radius:20px;
+padding:35px 25px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.5);
+width:100%;
+}
+
+.avatar{
+width:120px;
+height:120px;
+object-fit:cover;
+border-radius:16px;
+margin:0 auto 20px;
+border:2px solid #cccccc;
+}
+
+h1{
+font-weight:600;
+font-size:2em;
+margin-bottom:15px;
+}
+
+p{
+font-size:1em;
+margin-bottom:20px;
+color:#dddddd;
+line-height:1.5;
+}
+
+.social-icons{
+display:flex;
+justify-content:center;
+gap:25px;
+margin-top:10px;
+}
+
+.social-icons a{
+color:#ffffff;
+font-size:1.6em;
+padding:8px;
+transition:color .2s;
+}
+
+.social-icons a:hover{
+color:#cccccc;
+}
+
+.blocks-row{
+display:flex;
+gap:20px;
+width:100%;
+}
+
+.blocks-row .block{
+flex:1;
+}
+
+.block-list h2{
+font-size:1.7em;
+margin-bottom:20px;
+font-weight:600;
+}
+
+.block-list ul{
+list-style:none;
+}
+
+.block-list li{
+margin:10px 0;
+border:1px solid #cccccc;
+border-radius:12px;
+}
+
+.block-list li a{
+display:block;
+text-decoration:none;
+color:#ffffff;
+padding:16px 20px;
+border-radius:12px;
+transition:background .2s;
+min-height:52px;
+}
+
+.block-list li a:hover{
+background:#2e2e2e;
+}
+
+.block-list li a:active{
+background:#3a3a3a;
+}
+
+.project-title{
+font-weight:600;
+}
+
+.project-title::after{
+content:" — ";
+font-weight:400;
+color:#aaaaaa;
+}
+
+.project-desc{
+color:#dddddd;
+}
+
+/* Tablet */
+
+@media (max-width:900px){
+
+.blocks-row{
+flex-direction:column;
+}
+
+.block{
+padding:30px 20px;
+}
+
+h1{
+font-size:1.9em;
+}
+
+}
+
+/* Phone */
+
+@media (max-width:480px){
+
+body{
+padding:20px 12px 35px;
+gap:20px;
+}
+
+.avatar{
+width:95px;
+height:95px;
+}
+
+h1{
+font-size:1.7em;
+}
+
+p{
+font-size:0.95em;
+}
+
+.block{
+padding:25px 18px;
+}
+
+.block-list h2{
+font-size:1.5em;
+}
+
+.block-list li a{
+font-size:1em;
+padding:15px 16px;
+}
+
+.social-icons a{
+font-size:1.7em;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="block">
+
+<img class="avatar"
+src="https://i.pinimg.com/736x/43/86/fc/4386fcd7bbbc350717114b6bcbd889e2.jpg">
+
+<h1>relya (he/him)</h1>
+
+<p>
+Beginner python backend developer (Django, DRF, FastAPI)<br>
+Love and use Arch Linux & KDE Plasma<br>
+Favorite games: Undertale, Deltarune, Balatro, Chess.com
+</p>
+
+<div class="social-icons">
+
+<a href="https://github.com/" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://www.linkedin.com/" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="https://relyayy.t.me/" target="_blank">
+<i class="fab fa-telegram"></i>
+</a>
+
+<a href="mailto:example@email.com">
+<i class="fas fa-envelope"></i>
+</a>
+
+</div>
+</div>
+
+
+<div class="blocks-row">
+
+<div class="block block-list projects">
+
+<h2>Projects</h2>
+
+<ul>
+
+<li>
+<a href="#">
+<span class="project-title">Ark Linux</span>
+<span class="project-desc">Arch Linux based linux distro, made for fun on labor lessons</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<span class="project-title">llmate</span>
+<span class="project-desc">TUI-based local translator based on google/translategemma:4b model</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<span class="project-title">BetterVerticalTabs</span>
+<span class="project-desc">Firefox patch for bigger icon in pinned tabs (vertical mode)</span>
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="block block-list distros">
+
+<h2>Linux Distros</h2>
+
+<ul>
+
+<li>
+<a href="https://drive.google.com/uc?export=download&id=1jJrqy2Zl6V-ukGPyYul6FMalEydgGyhz">
+<b>Arch Linux (Feb26)</b><br>
+Kde LiveCD, with some usable scripts
+</a>
+</li>
+
+<li>
+<a href="https://mirror.truenetwork.ru/ubuntu-releases/25.10/ubuntu-25.10-desktop-amd64.iso">
+<b>Ubuntu 25.10</b><br>
+Just Ubuntu, not LTS
+</a>
+</li>
+
+<li>
+<a href="https://repo-default.voidlinux.org/live/current/void-live-x86_64-20250202-base.iso">
+<b>Void Linux</b><br>
+Glibc version
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</body>
+</html>
