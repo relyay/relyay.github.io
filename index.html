@@ -80,51 +80,6 @@ body {
         linear-gradient(160deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-3) 100%);
 }
 
-.bg-art {
-    position: absolute;
-    right: 12px;
-    bottom: -14px;
-    width: min(calc((100vw - 680px) / 2 + 70px), 520px);
-    height: auto;
-    filter: drop-shadow(0 12px 30px var(--shadow));
-}
-
-.sparkle {
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: twinkle 3.2s ease-in-out infinite;
-}
-.sparkle:nth-of-type(2) { animation-delay: 0.8s; }
-.sparkle:nth-of-type(3) { animation-delay: 1.6s; }
-.sparkle:nth-of-type(4) { animation-delay: 2.3s; }
-
-.tail {
-    transform-box: fill-box;
-    transform-origin: 85% 90%;
-    animation: wag 2.6s ease-in-out infinite;
-}
-
-.wave {
-    transform-box: fill-box;
-    transform-origin: 30% 95%;
-    animation: wave 2.2s ease-in-out infinite;
-}
-
-@keyframes twinkle {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(0.55); opacity: 0.45; }
-}
-
-@keyframes wag {
-    0%, 100% { transform: rotate(-4deg); }
-    50% { transform: rotate(7deg); }
-}
-
-@keyframes wave {
-    0%, 100% { transform: rotate(-7deg); }
-    50% { transform: rotate(9deg); }
-}
-
 /* ---------- card ---------- */
 
 .card {
@@ -144,22 +99,6 @@ body {
     align-items: center;
     gap: 20px;
     margin-bottom: 28px;
-}
-
-.avatar {
-    flex: none;
-    width: 104px;
-    height: 104px;
-    border-radius: 50%;
-    background: linear-gradient(140deg, var(--pink-soft), var(--bg-2));
-    border: 3px solid var(--pink);
-    overflow: hidden;
-}
-
-.avatar svg {
-    display: block;
-    width: 100%;
-    height: 100%;
 }
 
 h1 {
@@ -326,23 +265,10 @@ a.project:focus-visible {
     50% { opacity: 0; }
 }
 
-/* ---------- small screens: the critter sits under the card ---------- */
-
-@media (max-width: 1100px) {
-    body { padding-bottom: min(70vw, 400px); }
-    .bg { position: absolute; }
-    .bg-art {
-        right: 50%;
-        transform: translateX(50%);
-        width: min(72vw, 400px);
-    }
-}
-
 @media (max-width: 560px) {
     body { padding-top: 24px; }
     .card { padding: 24px 20px; border-radius: 26px; }
     .hero { gap: 14px; }
-    .avatar { width: 80px; height: 80px; }
     h1 { font-size: 2.1rem; }
 }
 
@@ -363,86 +289,14 @@ a.project:focus-visible {
         <ellipse cx="81" cy="44" rx="10" ry="13"/>
     </symbol>
 
-    <!-- head of the critter, shared by the avatar and the background drawing -->
-    <symbol id="head" viewBox="0 0 300 260" overflow="visible">
-        <g stroke="#3d3340" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round">
-            <!-- ears -->
-            <path d="M70 104 C46 62 48 26 62 4 C94 18 124 44 138 74 Z" fill="#fff"/>
-            <path d="M230 104 C254 62 252 26 238 4 C206 18 176 44 162 74 Z" fill="#fff"/>
-            <path d="M78 86 C64 58 64 38 69 24 C90 38 108 56 118 74 Z" fill="#f9b9cb" stroke="none"/>
-            <path d="M222 86 C236 58 236 38 231 24 C210 38 192 56 182 74 Z" fill="#f9b9cb" stroke="none"/>
-            <!-- fluffy face -->
-            <path d="M100 68 L118 60 L124 40 L142 56 L158 36 L170 56 L190 48 L196 66 C236 80 262 112 262 150 L290 156 L264 174 L286 196 L254 198 L258 224 L228 214 C208 238 180 248 150 248 C120 248 92 238 72 214 L42 224 L46 198 L14 196 L36 174 L10 156 L38 150 C38 112 62 82 100 68 Z" fill="#fff"/>
-        </g>
-        <!-- smug eyes -->
-        <path d="M80 142 L128 142 C128 168 118 182 104 182 C90 182 80 168 80 142 Z" fill="#2e2a33"/>
-        <path d="M220 142 L172 142 C172 168 182 182 196 182 C210 182 220 168 220 142 Z" fill="#2e2a33"/>
-        <circle cx="113" cy="154" r="6" fill="#fff"/>
-        <circle cx="205" cy="154" r="6" fill="#fff"/>
-        <circle cx="97" cy="170" r="3" fill="#fff" opacity="0.8"/>
-        <circle cx="189" cy="170" r="3" fill="#fff" opacity="0.8"/>
-        <g fill="none" stroke="#3d3340" stroke-linecap="round">
-            <path d="M76 142 L132 142 M224 142 L168 142" stroke-width="6"/>
-            <path d="M84 122 Q100 112 118 118 M216 122 Q200 112 182 118" stroke-width="4"/>
-        </g>
-        <!-- blush -->
-        <ellipse cx="70" cy="194" rx="18" ry="10" fill="#ff8fb0" opacity="0.55"/>
-        <ellipse cx="230" cy="194" rx="18" ry="10" fill="#ff8fb0" opacity="0.55"/>
-        <path d="M60 188 L56 200 M70 188 L66 200 M80 188 L76 200 M220 188 L224 200 M230 188 L234 200 M240 188 L244 200" fill="none" stroke="#e8628c" stroke-width="2.500" stroke-linecap="round" opacity="0.7"/>
-        <!-- nose, :3 and a fang -->
-        <path d="M143 188 Q150 184 157 188 Q154 196 150 196 Q146 196 143 188 Z" fill="#f08aa8"/>
-        <path d="M150 196 C150 212 132 216 124 204 M150 196 C150 212 168 216 176 204" fill="none" stroke="#3d3340" stroke-width="4.500" stroke-linecap="round"/>
-        <path d="M160 209 L164 219 L169 208 Z" fill="#fff" stroke="#3d3340" stroke-width="2.500" stroke-linejoin="round"/>
-    </symbol>
 </defs>
 </svg>
 
 <div class="bg" aria-hidden="true">
-    <svg class="bg-art" viewBox="0 0 520 500" xmlns="http://www.w3.org/2000/svg">
-        <!-- sparkles and hearts -->
-        <path class="sparkle" d="M70 120 Q74 138 92 142 Q74 146 70 164 Q66 146 48 142 Q66 138 70 120 Z" fill="#ffd166"/>
-        <path class="sparkle" d="M452 70 Q455 83 468 86 Q455 89 452 102 Q449 89 436 86 Q449 83 452 70 Z" fill="#ffd166"/>
-        <path class="sparkle" d="M408 28 c-7 -10 -22 -3 -18 9 c3 9 13 14 18 20 c5 -6 15 -11 18 -20 c4 -12 -11 -19 -18 -9 Z" fill="#ff7fa8"/>
-        <path class="sparkle" d="M120 60 c-5 -7 -16 -2 -13 6.5 c2 6.5 9.5 10 13 14.5 c3.5 -4.5 11 -8 13 -14.5 c3 -8.500 -8 -13.500 -13 -6.500 Z" fill="#b79cff"/>
-
-        <g stroke="#3d3340" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round">
-            <!-- tail -->
-            <g class="tail">
-                <path d="M218 432 C150 442 78 410 66 340 C58 296 78 256 104 240 L112 262 L134 244 L136 270 L156 266 C144 296 150 330 180 350 C196 360 214 368 232 372 Z" fill="#fff"/>
-            </g>
-
-            <!-- body -->
-            <path d="M206 330 C196 380 190 430 196 500 L392 500 C398 430 392 380 382 330 Z" fill="#fff"/>
-
-            <!-- waving arm -->
-            <g class="wave">
-                <path d="M372 356 C400 340 424 306 428 268 C430 246 458 244 462 268 C466 316 436 372 392 398 Z" fill="#fff"/>
-                <g fill="#f9a8c0" stroke="none">
-                    <ellipse cx="445" cy="282" rx="9" ry="8"/>
-                    <circle cx="434" cy="264" r="4.500"/>
-                    <circle cx="445" cy="259" r="4.500"/>
-                    <circle cx="456" cy="264" r="4.500"/>
-                </g>
-            </g>
-
-            <!-- resting arm -->
-            <path d="M222 364 C206 396 206 432 222 452 C236 466 258 456 256 436 C254 414 256 392 262 372 Z" fill="#fff"/>
-            <path d="M226 440 L228 452 M240 444 L241 456" fill="none" stroke-width="3.500"/>
-
-            <!-- chest fluff -->
-            <path d="M236 340 L246 372 L262 358 L274 392 L294 368 L314 392 L326 358 L342 372 L352 340 Z" fill="#fff"/>
-        </g>
-
-        <!-- head -->
-        <use href="#head" x="144" y="96" width="300" height="260"/>
-    </svg>
 </div>
 
 <main class="card">
     <header class="hero">
-        <div class="avatar" aria-hidden="true">
-            <svg viewBox="-10 -6 320 280"><use href="#head" width="300" height="260"/></svg>
-        </div>
         <div>
             <h1>relya</h1>
             <div class="chips">
