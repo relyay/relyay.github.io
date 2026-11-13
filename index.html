@@ -86,7 +86,7 @@ body {
     bottom: -14px;
     width: min(calc((100vw - 680px) / 2 + 70px), 520px);
     height: auto;
-    filter: drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 12px 30px var(--shadow));
+    filter: drop-shadow(0 12px 30px var(--shadow));
 }
 
 .sparkle {
@@ -365,35 +365,34 @@ a.project:focus-visible {
 
     <!-- head of the critter, shared by the avatar and the background drawing -->
     <symbol id="head" viewBox="0 0 300 260" overflow="visible">
-        <g stroke="#4a2f52" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round">
-            <!-- upright ear -->
-            <path d="M72 100 C52 62 56 26 70 4 C100 20 126 46 136 74 Z" fill="#fde6cf"/>
-            <path d="M80 84 C68 58 69 38 75 24 C96 38 112 56 120 74 Z" fill="#c98780" stroke="none"/>
-            <!-- floppy ear -->
-            <path d="M188 72 C200 36 236 24 262 42 C294 64 296 110 278 136 C258 124 244 106 230 94 Z" fill="#fde6cf"/>
-            <path d="M214 62 C230 46 252 46 266 60 C283 78 283 106 273 122 C258 110 240 88 214 62 Z" fill="#c98780" stroke="none"/>
+        <g stroke="#3d3340" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round">
+            <!-- ears -->
+            <path d="M70 104 C46 62 48 26 62 4 C94 18 124 44 138 74 Z" fill="#fff"/>
+            <path d="M230 104 C254 62 252 26 238 4 C206 18 176 44 162 74 Z" fill="#fff"/>
+            <path d="M78 86 C64 58 64 38 69 24 C90 38 108 56 118 74 Z" fill="#f9b9cb" stroke="none"/>
+            <path d="M222 86 C236 58 236 38 231 24 C210 38 192 56 182 74 Z" fill="#f9b9cb" stroke="none"/>
             <!-- fluffy face -->
-            <path d="M96 70 L82 48 L112 60 L118 36 L140 54 L156 32 L170 54 L198 42 L198 64 C236 78 262 112 262 150 L288 160 L262 176 L282 200 L250 200 L254 224 L226 216 C206 238 180 248 150 248 C120 248 94 238 74 216 L46 224 L50 200 L18 200 L38 176 L12 160 L38 150 C38 112 60 82 96 70 Z" fill="#fde6cf"/>
-            <!-- muzzle -->
-            <path d="M150 170 C176 170 204 188 208 212 C194 236 172 244 150 244 C128 244 106 236 92 212 C96 188 124 170 150 170 Z" fill="#fffaf3" stroke="none"/>
+            <path d="M100 68 L118 60 L124 40 L142 56 L158 36 L170 56 L190 48 L196 66 C236 80 262 112 262 150 L290 156 L264 174 L286 196 L254 198 L258 224 L228 214 C208 238 180 248 150 248 C120 248 92 238 72 214 L42 224 L46 198 L14 196 L36 174 L10 156 L38 150 C38 112 62 82 100 68 Z" fill="#fff"/>
         </g>
-        <!-- sleepy eyes -->
-        <path d="M82 142 L126 144 C126 168 116 180 104 180 C90 180 82 166 82 142 Z" fill="#a2408f"/>
-        <path d="M82 142 L126 144 C126 152 125 158 124 162 L84 160 C83 154 82 148 82 142 Z" fill="#4a2350"/>
-        <path d="M218 142 L174 144 C174 168 184 180 196 180 C210 180 218 166 218 142 Z" fill="#a2408f"/>
-        <path d="M218 142 L174 144 C174 152 175 158 176 162 L216 160 C217 154 218 148 218 142 Z" fill="#4a2350"/>
-        <rect x="110" y="152" width="7" height="13" rx="3.500" fill="#fff" opacity="0.9"/>
-        <rect x="202" y="150" width="7" height="13" rx="3.500" fill="#fff" opacity="0.9"/>
-        <g fill="none" stroke="#4a2f52" stroke-linecap="round">
-            <path d="M78 141 L129 144 M222 141 L171 144" stroke-width="6"/>
-            <path d="M84 128 Q96 116 114 112 M216 128 Q204 116 186 112" stroke-width="4"/>
-            <path d="M139 206 Q150 215 161 206" stroke-width="4.500"/>
+        <!-- smug eyes -->
+        <path d="M80 142 L128 142 C128 168 118 182 104 182 C90 182 80 168 80 142 Z" fill="#2e2a33"/>
+        <path d="M220 142 L172 142 C172 168 182 182 196 182 C210 182 220 168 220 142 Z" fill="#2e2a33"/>
+        <circle cx="113" cy="154" r="6" fill="#fff"/>
+        <circle cx="205" cy="154" r="6" fill="#fff"/>
+        <circle cx="97" cy="170" r="3" fill="#fff" opacity="0.8"/>
+        <circle cx="189" cy="170" r="3" fill="#fff" opacity="0.8"/>
+        <g fill="none" stroke="#3d3340" stroke-linecap="round">
+            <path d="M76 142 L132 142 M224 142 L168 142" stroke-width="6"/>
+            <path d="M84 122 Q100 112 118 118 M216 122 Q200 112 182 118" stroke-width="4"/>
         </g>
         <!-- blush -->
-        <ellipse cx="74" cy="192" rx="16" ry="9" fill="#ff8fa8" opacity="0.5"/>
-        <ellipse cx="226" cy="192" rx="16" ry="9" fill="#ff8fa8" opacity="0.5"/>
-        <!-- nose -->
-        <path d="M143 190 Q150 186 157 190 Q154 198 150 198 Q146 198 143 190 Z" fill="#4a2f52"/>
+        <ellipse cx="70" cy="194" rx="18" ry="10" fill="#ff8fb0" opacity="0.55"/>
+        <ellipse cx="230" cy="194" rx="18" ry="10" fill="#ff8fb0" opacity="0.55"/>
+        <path d="M60 188 L56 200 M70 188 L66 200 M80 188 L76 200 M220 188 L224 200 M230 188 L234 200 M240 188 L244 200" fill="none" stroke="#e8628c" stroke-width="2.500" stroke-linecap="round" opacity="0.7"/>
+        <!-- nose, :3 and a fang -->
+        <path d="M143 188 Q150 184 157 188 Q154 196 150 196 Q146 196 143 188 Z" fill="#f08aa8"/>
+        <path d="M150 196 C150 212 132 216 124 204 M150 196 C150 212 168 216 176 204" fill="none" stroke="#3d3340" stroke-width="4.500" stroke-linecap="round"/>
+        <path d="M160 209 L164 219 L169 208 Z" fill="#fff" stroke="#3d3340" stroke-width="2.500" stroke-linejoin="round"/>
     </symbol>
 </defs>
 </svg>
@@ -406,40 +405,32 @@ a.project:focus-visible {
         <path class="sparkle" d="M408 28 c-7 -10 -22 -3 -18 9 c3 9 13 14 18 20 c5 -6 15 -11 18 -20 c4 -12 -11 -19 -18 -9 Z" fill="#ff7fa8"/>
         <path class="sparkle" d="M120 60 c-5 -7 -16 -2 -13 6.5 c2 6.5 9.5 10 13 14.5 c3.5 -4.5 11 -8 13 -14.5 c3 -8.500 -8 -13.500 -13 -6.500 Z" fill="#b79cff"/>
 
-        <g stroke="#4a2f52" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round">
+        <g stroke="#3d3340" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round">
             <!-- tail -->
             <g class="tail">
-                <path d="M218 432 C150 442 78 410 66 340 C58 296 78 256 104 240 L112 262 L134 244 L136 270 L156 266 C144 296 150 330 180 350 C196 360 214 368 232 372 Z" fill="#fde6cf"/>
-                <path d="M104 240 C78 256 60 292 66 334 C80 316 98 306 118 306 C124 296 136 288 152 284 L156 266 L136 270 L134 244 L112 262 Z" fill="#e3a79c"/>
+                <path d="M218 432 C150 442 78 410 66 340 C58 296 78 256 104 240 L112 262 L134 244 L136 270 L156 266 C144 296 150 330 180 350 C196 360 214 368 232 372 Z" fill="#fff"/>
             </g>
 
-            <!-- hoodie -->
-            <path d="M206 330 C196 380 190 430 196 500 L392 500 C398 430 392 380 382 330 Z" fill="#6b4a7a"/>
+            <!-- body -->
+            <path d="M206 330 C196 380 190 430 196 500 L392 500 C398 430 392 380 382 330 Z" fill="#fff"/>
 
             <!-- waving arm -->
             <g class="wave">
-                <circle cx="445" cy="262" r="19" fill="#fde6cf"/>
-                <g fill="#f29ab0" stroke="none">
-                    <ellipse cx="445" cy="266" rx="8" ry="7"/>
-                    <circle cx="435" cy="252" r="4"/>
-                    <circle cx="445" cy="248" r="4"/>
-                    <circle cx="455" cy="252" r="4"/>
+                <path d="M372 356 C400 340 424 306 428 268 C430 246 458 244 462 268 C466 316 436 372 392 398 Z" fill="#fff"/>
+                <g fill="#f9a8c0" stroke="none">
+                    <ellipse cx="445" cy="282" rx="9" ry="8"/>
+                    <circle cx="434" cy="264" r="4.500"/>
+                    <circle cx="445" cy="259" r="4.500"/>
+                    <circle cx="456" cy="264" r="4.500"/>
                 </g>
-                <path d="M372 356 C400 340 420 312 424 278 C436 286 454 286 466 278 C468 322 438 372 392 398 Z" fill="#6b4a7a"/>
             </g>
 
-            <!-- sleeve hiding the other paw -->
-            <path d="M222 364 C204 396 202 436 220 458 C236 472 262 462 260 438 C258 414 258 392 264 372 Z" fill="#6b4a7a"/>
+            <!-- resting arm -->
+            <path d="M222 364 C206 396 206 432 222 452 C236 466 258 456 256 436 C254 414 256 392 262 372 Z" fill="#fff"/>
+            <path d="M226 440 L228 452 M240 444 L241 456" fill="none" stroke-width="3.500"/>
 
-            <!-- hood -->
-            <path d="M208 328 C222 362 262 384 294 404 C326 384 366 362 380 328 C392 340 392 356 384 366 C356 392 322 410 294 428 C266 410 232 392 204 366 C196 356 196 340 208 328 Z" fill="#7a5689"/>
-            <path d="M276 398 L274 452 M312 398 L314 452" fill="none" stroke="#fffaf3" stroke-width="7"/>
-
-            <!-- collar with a bell -->
-            <path d="M248 338 Q294 372 340 338" fill="none" stroke="#4a2f52" stroke-width="19"/>
-            <path d="M248 338 Q294 372 340 338" fill="none" stroke="#e0638f" stroke-width="11"/>
-            <circle cx="294" cy="366" r="14" fill="#fffaf3"/>
-            <path d="M286 368 L302 368 M294 368 L294 378" fill="none" stroke-width="3.500"/>
+            <!-- chest fluff -->
+            <path d="M236 340 L246 372 L262 358 L274 392 L294 368 L314 392 L326 358 L342 372 L352 340 Z" fill="#fff"/>
         </g>
 
         <!-- head -->
